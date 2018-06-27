@@ -44,64 +44,9 @@
 </head>
 
 <body>
-  <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId: '',
-      xfbml: true,
-      version: 'v2.2'
-    });
-  };
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) { return; }
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
-  $(document).ready(function() {
-    var lightbox_inq = function(elm, url) {
-      if (typeof elm != 'undefined') {
-
-        elm.attr("src", url);
-        elm.lightbox_me({
-          centered: true,
-          onLoad: function() {
-            setTimeout(function() { elm.contents().find("form input:visible:first").focus(); }, 200);
-          }
-        });
-      }
-    };
-    $('a[id^=raku_inq]').click(function(e) {
-      lightbox_inq($("#inquiry"), "/contact/index_raku");
-      e.preventDefault();
-    });
-    $('#raku_existing-customer').click(function(e) {
-      lightbox_inq($("#inquiry"), "/contact/index_raku_opt");
-      e.preventDefault();
-    });
-  });
-  </script>
   <header>
     <div class="header-contents">
       <a href="#" target="_self"><img src="assets/img/bg_logo.png" class="logo" alt="logo"></a>
-      <div class="ninja_onebutton" style="float:right; margin: 15px 5px;">
-        <script>
-        //<![CDATA[
-        (function(d) {
-          if (typeof(window.NINJA_CO_JP_ONETAG_BUTTON_5235af9aa27fa23a809575141db20803) == 'undefined') {
-            document.write("<sc" + "ript type='text\/javascript' src='\/\/omt.shinobi.jp\/b\/5235af9aa27fa23a809575141db20803'><\/sc" + "ript>");
-          } else {
-            window.NINJA_CO_JP_ONETAG_BUTTON_5235af9aa27fa23a809575141db20803.ONETAGButton_Load();
-          }
-        })(document);
-        //]]>
-        </script>
-        <span class="ninja_onebutton_hidden" style="display:none;"></span>
-        <span style="display:none;" class="ninja_onebutton_hidden"></span>
-      </div>
     </div>
   </header>
   <main>
@@ -109,7 +54,8 @@
     <div id="mainstuff-container">
       <div class="mainstuff">
         <p>Watch the video</p>
-        <br><a href="https://www.youtube.com/watch?v=NRSHSYm8SjA&rel=0" rel="prettyPhoto" title="video"><img src="assets/img/btn_video.jpg" onmouseover="this.src='assets/img/btn_video_on.jpg'" onmouseout="this.src='assets/img/btn_video.jpg'" width="118" alt="Watch the video"></a>
+        <br>
+        <img src="assets/img/btn_video.jpg" onmouseover="this.src='assets/img/btn_video_on.jpg'" onmouseout="this.src='assets/img/btn_video.jpg'" width="118" alt="Watch the video"></a>
         <a id="raku_inq1" href="#" target="_self"><img src="assets/img/btn_inquiry_first.png" onmouseover="this.src='assets/img/btn_inquiry_first_light.png'" onmouseout="this.src='assets/img/btn_inquiry_first.png'" alt="Contact"></a>
       </div>
 
