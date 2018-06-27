@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/cssreset-min.css">
+  <link rel="stylesheet" href="assets/css/0general.css">
+  <link rel="stylesheet" href="assets/css/prettyPhoto.css" media="screen" title="prettyPhoto main stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="assets/js/jquery.lightbox_me.js"></script>
+  <script src="assets/js/jquery.ah-placeholder.js"></script>
+  <script src="assets/js/jquery.prettyPhoto.js"></script>
+  <script>
+  $(document).ready(function($) {
+    $('#accordion div').hide();
+    $('#accordion p span').click(function() {
+      var $targetDiv = $(this).closest('p').next();
+      var isHidden = $targetDiv.is(':hidden');
+
+      $('#accordion div').slideUp();
+      if (isHidden) {
+        $targetDiv.slideDown();
+      }
+      return false;
+    });
+  });
+  </script>
+  <title>This is a responsive generic template for long LPs! Enjoy!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ryoji Matsuzaki">
+  <meta name="description" content="This is my responsive site for generic LPs" />
+  <meta name="keywords" content="LP, Website, Code" />
+  <meta property="og:title" content="This is my responsive site for generic LPs" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="This is my responsive site for generic LPs" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="This is my responsive site for generic LPs" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="fb:admins" content="" />
+  <meta property="fb:app_id" content="" />
+</head>
+
+<body>
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId: '',
+      xfbml: true,
+      version: 'v2.2'
+    });
+  };
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) { return; }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  $(document).ready(function() {
+    var lightbox_inq = function(elm, url) {
+      if (typeof elm != 'undefined') {
+
+        elm.attr("src", url);
+        elm.lightbox_me({
+          centered: true,
+          onLoad: function() {
+            setTimeout(function() { elm.contents().find("form input:visible:first").focus(); }, 200);
+          }
+        });
+      }
+    };
+    $('a[id^=raku_inq]').click(function(e) {
+      lightbox_inq($("#inquiry"), "/contact/index_raku");
+      e.preventDefault();
+    });
+    $('#raku_existing-customer').click(function(e) {
+      lightbox_inq($("#inquiry"), "/contact/index_raku_opt");
+      e.preventDefault();
+    });
+  });
+  </script>
+  <header>
+    <div class="header-contents">
+      <a href="#" target="_self"><img src="assets/img/bg_logo.png" class="logo" alt="logo"></a>
+      <div class="ninja_onebutton" style="float:right; margin: 15px 5px;">
+        <script>
+        //<![CDATA[
+        (function(d) {
+          if (typeof(window.NINJA_CO_JP_ONETAG_BUTTON_5235af9aa27fa23a809575141db20803) == 'undefined') {
+            document.write("<sc" + "ript type='text\/javascript' src='\/\/omt.shinobi.jp\/b\/5235af9aa27fa23a809575141db20803'><\/sc" + "ript>");
+          } else {
+            window.NINJA_CO_JP_ONETAG_BUTTON_5235af9aa27fa23a809575141db20803.ONETAGButton_Load();
+          }
+        })(document);
+        //]]>
+        </script>
+        <span class="ninja_onebutton_hidden" style="display:none;"></span>
+        <span style="display:none;" class="ninja_onebutton_hidden"></span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!--Main-->
+    <div id="mainstuff-container">
+      <div class="mainstuff">
+        <p>Watch the video</p>
+        <br><a href="https://www.youtube.com/watch?v=NRSHSYm8SjA&rel=0" rel="prettyPhoto" title="video"><img src="assets/img/btn_video.jpg" onmouseover="this.src='assets/img/btn_video_on.jpg'" onmouseout="this.src='assets/img/btn_video.jpg'" width="118" alt="Watch the video"></a>
+        <a id="raku_inq1" href="#" target="_self"><img src="assets/img/btn_inquiry_first.png" onmouseover="this.src='assets/img/btn_inquiry_first_light.png'" onmouseout="this.src='assets/img/btn_inquiry_first.png'" alt="Contact"></a>
+      </div>
+
+      <div class="mainstuff-sm">
+       
+      </div>
+
+    </div>
+    <!--Blue Line-->
+    <div id="thinbluebar"></div>
+    <!--Issues-->
+    <section id="issue-container">
+      <h2 class="wow fadeInUp title-color-2">Issues
+    </h2>
+      <div class="issue-contents">
+        <div class="issue-item">
+          <p>Problem 1
+            <!--<img src = "assets/img/bg_issue_worker.jpg">-->
+            <br>・A bunch of problems
+            <br>・A lot more problems
+            <br>・A whole lot of other problems
+          </p>
+        </div>
+        <div class="issue-item">
+          <p>Problem 2
+            <!--img src="assets/img/bg_issue_manager.jpg">-->
+            <br>・A bunch of problems
+            <br>・A lot more problems
+            <br>・A whole lot of other problems
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--Solution-->
+    <section id="solution-container">
+      <h2 class="wow fadeInUp">Solution</h2>
+      <div class="solution-contents">
+        <div class="solution-items">Item 1</div>
+        <div class="solution-items">Item 2</div>
+        <div class="solution-items">Item 3</div>
+      </div>
+    </section>
+    <!--About-->
+    <section id="about-container">
+      <h2 class="wow fadeInUp">About</h2>
+      <div class="about-app">
+
+      </div>
+
+      <h2 class="wow fadeInUp">TEST</h2>
+      <div class="about-web">
+
+      </div>
+      <div class="cta center-item">
+        <a id="raku_inq2" href="#" target="_blank"><img src="assets/img/btn_inquiry_2.png" onmouseover="this.src='assets/img/btn_inquiry_first_light.png'" onmouseout="this.src='assets/img/btn_inquiry_2.png'" alt="Contact"/></a>
+      </div>
+      </div>
+    </section>
+    <!--Merit-->
+    <section id="merit-container">
+      <h2 class="wow fadeInUp">Merits</h2>
+      <div class="merit-contents">
+        <div class="merit-items">
+          <img src="assets/img/bg_merit1.png">
+          <p class="merit_text">
+            Merit 1
+          </p>
+          <p class="content_merit_smalltext">
+            This is the explanation text for Merit 1.
+          </p>
+        </div>
+        <div class="merit-items">
+          <img src="assets/img/bg_merit2.png">
+          <p class="merit_text ">
+            Merit 2
+          </p>
+          <p class="content_merit_smalltext">
+            This is the explanation text for Merit 2.
+          </p>
+        </div>
+        <div class="merit-items">
+          <img src="assets/img/bg_merit3.png">
+          <p class="merit_text ">
+            Merit 3
+          </p>
+          <p class="content_merit_smalltext">
+            This is the explanation text for Merit 3.
+          </p>
+        </div>
+        <div class="merit-items">
+          <img src="assets/img/bg_merit4.png">
+          <p class="merit_text ">
+            Merit 4
+          </p>
+          <p class="content_merit_smalltext">
+            This is the explanation text for Merit 4.
+          </p>
+        </div>
+        <div class="merit-items">
+          <img src="assets/img/bg_merit5.png">
+          <p class="merit_text ">
+            Merit 5
+          </p>
+          <p class="content_merit_smalltext">
+            This is the explanation text for Merit 5.
+          </p>
+        </div>
+        <div class="merit-items">
+          <img src="assets/img/bg_merit6.png">
+          <p class="merit_text ">
+            Merit 6
+          </p>
+          <p class="content_merit_smalltext">
+            This is the explanation text for Merit 6.
+          </p>
+        </div>
+        <div class="cta center-item">
+          <a id="raku_inq3" href="#" target="_blank"><img src="assets/img/btn_inquiry_2.png" onmouseover="this.src='assets/img/btn_inquiry_first_light.png'" onmouseout="this.src='assets/img/btn_inquiry_2.png'" alt="Contact"/></a>
+        </div>
+      </div>
+    </section>
+    <!--Connect-->
+    <section id="connect">
+      <h2 class="wow fadeInUp">Easily connect with other systems</h2>
+      <div class="connect-logos">
+        <div class="connect-items">
+          <a href="http://pnets.panasonic.co.jp/Home/products.nsf/ContentsByKey/MajorFLowKeihi01" target="_blank"><img src="assets/img/logo_majorflow.png" onmouseover="this.src='assets/img/logo_majorflow_light.png'" onmouseout="this.src='assets/img/logo_majorflow.png'" alt="MajorFlow"></a>
+        </div>
+        <div class="connect-items">
+          <a href="http://www.majorflow.jp/?page_id=144" target="_blank"><img src="assets/img/logo_majorflowcloud.png" onmouseover="this.src='assets/img/logo_majorflowcloud_light.png'" onmouseout="this.src='assets/img/logo_majorflowcloud.png'" alt="MajorFlowCloud"></a>
+        </div>
+        <div class="connect-items">
+          <a href="http://www.rakurakuseisan.jp/" target="_blank"><img src="assets/img/logo_rakurakuseisan.png" onmouseover="this.src='assets/img/logo_rakurakuseisan_light.png'" onmouseout="this.src='assets/img/logo_rakurakuseisan.png'" alt="楽々精算"></a>
+        </div>
+      </div>
+      <p class="center-item">Other types of system connections are possible. For more information please contact.</p>
+      <div class="cta center-item">
+        <a id="raku_inq4" href="#" target="_blank"><img src="assets/img/btn_inquiry_2.png" onmouseover="this.src='assets/img/btn_inquiry_first_light.png'" onmouseout="this.src='assets/img/btn_inquiry_2.png'" alt="Contact"/></a>
+      </div>
+    </section>
+    <!--ROI-->
+    <section id="effect-container">
+      <h2 class="wow fadeInUp title-color-2">ROI Calculator</h2>
+      <div class="effect-top">
+        Example: XYZ Corporation
+      </div>
+      <div class="effect-contents">
+        <div class="effect-items">
+          XYZ Corporation
+          <img src="assets/img/bg_effect_company1.png">
+        </div>
+        <div class="effect-items">
+          Transit times per person per month
+          <img src="assets/img/bg_effect_company2.png">
+        </div>
+      </div>
+      <div class="roi-table">
+        <table class="roi" align="center">
+          <tr>
+            <th>Work</th>
+            <th>Time</th>
+            <th>Reducable Time</th>
+            <th>Average Cost</th>
+            <th>Number of Staff</th>
+            <th>Monthly reducable Cost</th>
+          </tr>
+          <tr>
+            <td>Sales Team A</td>
+            <td>105 min.</td>
+            <td>84 min.</td>
+            <td rowspan="4">$4,330
+              <td>100 people</td>
+              <td>$3,780 Reduction</td>
+          </tr>
+          <tr>
+            <td>Sales Team B</td>
+            <td>65 min.</td>
+            <td>52 min.</td>
+            <td>80 people</td>
+            <td>$1,872 Reduction</td>
+          </tr>
+          <tr>
+            <td>Office</td>
+            <td>9 min.</td>
+            <td>7 min.</td>
+            <td>90 people</td>
+            <td>$291 Reduction</td>
+          </tr>
+          <tr>
+            <td>Back Office</td>
+            <td>13 min.</td>
+            <td>10 min.</td>
+            <td>30 people</td>
+            <td>$140 Reduction</td>
+          </tr>
+          <tr>
+            <td colspan="4">Reduction = Average Cost (minutes) × Reducable Cost × People</td>
+            <td>Total</td>
+            <td>$6,080 Reduction</td>
+          </tr>
+          <tr>
+            <td colspan="5">System Cost = $5 × People</td>
+            <td>$1,500</td>
+          </tr>
+        </table>
+      </div>
+      <div class="roi-table-sm">
+        <table class="roi" align="center">
+          <tr>
+            <th>Work</th>
+            <th>Time</th>
+          </tr>
+          <tr>
+            <td>Sales Team A</td>
+            <td>105 min.</td>
+          </tr>
+          <tr>
+            <td>Sales Team B</td>
+            <td>65 min.</td>
+          </tr>
+          <tr>
+            <td>Office</td>
+            <td>9 min.</td>
+          </tr>
+          <tr>
+            <td>Back Office</td>
+            <td>13 min.</td>
+          </tr>
+          <tr>
+            <td>Reduction = Average Cost (minutes) × Reducable Cost × People</td>
+            <td>$6,080 Reduction</td>
+          </tr>
+          <tr>
+            <td>System Cost = $5 × People</td>
+            <td>$1,500</td>
+          </tr>
+        </table>
+      </div>
+      <p class="effect-last center-item">In 1 month the ROI will be $4,600</p>
+      <div class="cta center-item">
+        <a id="raku_inq5" href="#" target="_blank"><img src="assets/img/btn_inquiry_first.png" onmouseover="this.src='assets/img/btn_inquiry_first_light.png'" onmouseout="this.src='assets/img/btn_inquiry_first.png'" alt="Contact"></a>
+      </div>
+    </section>
+    <!--Testimonials-->
+    <section id="case-container">
+      <h2 class="wow fadeInUp">Testimonials</h2>
+      <div class="case-contents">
+        <p class="case_quote">The SaaS has made our team
+        <br>at least twice as efficient. We're really thankful!</p>
+        <p class="case_quote_small">Mike Bale, ABC Corporation</p>
+        <div class="case-items">
+          <p class="case_fenwal">ABC Corporation</p>
+          <p class="case_fenwal_small">ABC Corporation is a leader in the Oil Industry in the North American Continent. Established in 1890, the company has pioneered major industry innovations including the Fortman method in mining technology.</p>
+        </div>
+
+        <div class="case-items">
+          "Before SaaS, we were losing 2 hours a day to territory planning and reporting results. Now our routes take 5 minutes and directly link to activity. SaaS has certainly improved productivity."
+        </div>
+        <div class="data-box">
+          <dl>
+            <dt><strong>ABC Corporation</strong></dt>
+            <dd>Riverdale, North Dakota</dd>
+            <dd>Mining technology and Engineering
+              <br> Print 
+            </dd>
+            <dd>NYSE</dd>
+            <dd><a href=" http://www.fenwal.co.jp/" target="_blank"> http://www.abc-corporation-riverdale.com</a></dd>
+            <dd>Time of installation : Feb, 2018</dd>
+            <dd>Number of installed IDs : 50</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="cta center-item">
+        <a id="raku_inq8" href="" target="_blank"><img src="assets/img/btn_inquiry_2.png" onmouseover="this.src='assets/img/btn_inquiry_first_light.png'" onmouseout="this.src='assets/img/btn_inquiry_2.png'" alt="Contact"/></a>
+      </div>
+    </section>
+    <!--Pricing-->
+    <section id="pricing">
+      <h2 class="wow fadeInUp">Pricing</h2>
+      <div class="pricing-contents">
+        <div class="pricing-table">
+          <p>HAHAHA</p>
+          <dl>
+            <dd>Title</dd>
+            <dt>content</dt>
+          </dl>
+        </div>
+        <div class="pricing-annotation">
+          ※ This includes support necessary during the setup process. Support will be done over phone or otherwisel remotely.
+          <br>※ 10 users increments
+          <br>※ Annual contract is necessary
+          <div class="cta center-item">
+            <a id="raku_inq7 " href="# " target="_blank "><img src="assets/img/btn_inquiry_2.png " onmouseover="this.src='assets/img/btn_inquiry_first_light.png' " onmouseout="this.src='assets/img/btn_inquiry_2.png' " alt="Contact "/></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--FAQ-->
+    <section id="faq">
+      <h2 class="wow fadeInUp">Frequently Asked Questions</h2>
+      <div class="faq_contents">
+        <div id="accordion">
+          <p class="question"><span>Q. Can you use this in teams!▼</span></p>
+          <div class="answer">
+            <p>A. Yes, you can use it in teams!</p>
+          </div>
+          <p class="question"><span>Q. What are the benefits?▼</span></p>
+          <div class="answer">
+            <p>A. There are too many, I cannot describe them all here. </p>
+          </div>
+          <p class="question"><span>Q. Can this system connect with other systems?▼</span></p>
+          <div class="answer">
+            <p>A. Yes, absolutely!</p>
+          </div>
+        </div>
+      </div>
+      <div class="cta center-item">
+        <a id="raku_inq8 " href=" " target="_blank "><img src="assets/img/btn_inquiry_2.png " onmouseover="this.src='assets/img/btn_inquiry_first_light.png' " onmouseout="this.src='assets/img/btn_inquiry_2.png' " alt="Contact "/></a>
+      </div>
+    </section>
+  </main>
+  <!--Footer-->
+  <footer>
+    <p class="footer-text">
+      Copyright Ryoji Matsuzaki All Rights Reserved.
+    </p>
+    <div class="social">
+      <a href="https://twitter.com/gpspunch?lang=ja" target="_blank"><img src="assets/img/social_twitter.png" alt="Twitter" width="35" height="35" onmouseover="this.src='assets/img/social_twitter_light.png'" onmouseout="this.src='assets/img/social_twitter.png'" style="margin-right:5px;"/></a>
+      <a href="https://www.facebook.com/gpspunch?ref=bookmarks" target="_blank"><img alt="Facebook" src="assets/img/social_facebook.png" width="35" height="35" onmouseover="this.src='assets/img/social_facebook_light.png'" onmouseout="this.src='assets/img/social_facebook.png'" style="margin-right:5px"/></a>
+      <a href="https://plus.google.com/112638888442386971501/posts" target="_blank"><img alt="GooglePlus" src="assets/img/social_google.png" width="35" height="35" onmouseover="this.src='assets/img/social_google_light.png'" onmouseout="this.src='assets/img/social_google.png'"/></a>
+    </div>
+  </footer>
+  <script src="assets/js/wow.min.js"></script>
+  <script>
+  new WOW().init();
+  </script>
+  <script>
+  $(document).ready(function() {
+    $("a[rel^='prettyPhoto']").prettyPhoto();
+  });
+  </script>
+  <iframe id="inquiry" src="" style="display:none;width:680px;height:680px">
+  </iframe>
+</body>
+
+</html>
