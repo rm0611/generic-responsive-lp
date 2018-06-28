@@ -52,7 +52,7 @@ header {
 .header-contents {
   margin: 0 auto;
   padding: 0 auto;
-  width: 940px;
+  max-width: 940px;
   position: relative;
 }
 
@@ -100,9 +100,8 @@ header {
 
 .mainstuff {
   background-color: blue;
-  /*background: url(../img/main_bg.jpg) no-repeat;*/
   background-position: center;
-  width: 940px;
+  max-width: 940px;
   height: 520px;
   margin: 0 auto;
   padding: 0 auto;
