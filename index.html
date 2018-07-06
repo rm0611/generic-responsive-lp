@@ -6,27 +6,11 @@
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="assets/css/cssreset-min.css">
   <link rel="stylesheet" href="assets/css/0general.css">
-  <link rel="stylesheet" href="assets/css/prettyPhoto.css" media="screen" title="prettyPhoto main stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="assets/js/jquery.lightbox_me.js"></script>
   <script src="assets/js/jquery.ah-placeholder.js"></script>
-  <script src="assets/js/jquery.prettyPhoto.js"></script>
-  <script>
-  $(document).ready(function($) {
-    $('#accordion div').hide();
-    $('#accordion p span').click(function() {
-      var $targetDiv = $(this).closest('p').next();
-      var isHidden = $targetDiv.is(':hidden');
-
-      $('#accordion div').slideUp();
-      if (isHidden) {
-        $targetDiv.slideDown();
-      }
-      return false;
-    });
-  });
-  </script>
+  <script src="assets/js/script.js"></script>
   <title>This is a responsive generic template for long LPs! Enjoy!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Ryoji Matsuzaki">
@@ -386,13 +370,6 @@
   <script>
   new WOW().init();
   </script>
-  <script>
-  $(document).ready(function() {
-    $("a[rel^='prettyPhoto']").prettyPhoto();
-  });
-  </script>
-  <iframe id="inquiry" src="" style="display:none;width:680px;height:680px">
-  </iframe>
 </body>
 
 </html>
