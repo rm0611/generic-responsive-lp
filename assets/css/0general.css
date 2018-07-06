@@ -80,6 +80,19 @@ header {
   padding-top:5px;
 }
 
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+nav ul li, li a {
+  display: inline;
+  padding: 10px;
+}
+
 /* roi ************************************************/
 
 .roi-table {
@@ -119,7 +132,7 @@ header {
 }
 
 .mainstuff {
-  background-color: blue;
+  background-color: orange;
   background-position: center;
   max-width: 940px;
   height: 520px;
